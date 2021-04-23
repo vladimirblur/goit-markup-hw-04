@@ -1,0 +1,608 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --footer-background-color: #2f303a;
+  --icon-color: #afb1b8;
+
+  --hero-bg: #2f303a;
+  --team-bg: #f5f4fa;
+
+  --main-font: Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+
+/* Утилиты */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* Глобальное оформление ссылок */
+
+.link {
+  text-decoration: none;
+}
+
+/* Глобальное оформление списков */
+.list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Heading */
+.title {
+  color: var(--title-text-color);
+}
+
+/* Элементы  Header container */
+
+.header {
+  border-bottom: 1px solid #ececec;
+  background-color: var(--primary-white-color);
+}
+.header .position {
+  display: flex;
+  align-items: center;
+}
+
+/* Логотип */
+.logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  color: #000000;
+}
+.accent {
+  color: var(--accent-color);
+}
+
+/* Панель навигации */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .item:not(:last-child),
+.contacts-head .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.link.current {
+  color: var(--accent-color);
+}
+
+/* Контакты */
+.contacts-head {
+  display: flex;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+.contacts-head .link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon-contacts {
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+.contacts-head .link:hover,
+.contacts-head .link:focus {
+  color: var(--accent-color);
+}
+
+/* main секция страницы Студия */
+/* Секция Hero  */
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/images/background-hero.jpg);
+  background-color: var(--hero-bg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-title {
+  max-width: 696px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.button-primary {
+  padding: 10px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Секция особенностей */
+.features-icon {
+  display: flex;
+}
+
+.features-icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc((100% - 4 * 30px) / 4);
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features-icon-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-icon .icon {
+  width: 70px;
+  height: 70px;
+}
+
+.features.list {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.features-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.features .item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
+.features .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Секция Чем мы занимаемся */
+.action.section {
+  padding-top: 0;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.activity {
+  display: flex;
+}
+
+.activity .item {
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.activity .item:not(:last-child) {
+  margin-right: 30px;
+}
+/* Секция Наша команда */
+.team.section {
+  background-color: var(--team-bg);
+}
+
+.team-title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--title-text-color);
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team .item {
+  flex-basis: calc((100% - 120px) / 4);
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.team .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-content {
+  padding: 30px;
+}
+
+.team-post {
+  margin-bottom: 16px;
+}
+
+.social-icons {
+  display: inline-flex;
+}
+
+.social-icons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
+  fill: var(--primary-white-color);
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+/* Clients section */
+.clients-list {
+  display: inline-flex;
+}
+
+.clients-list-item {
+  width: 170px;
+  height: 90px;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  color: var(--icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-link:hover .client-icon,
+.clients-link:focus .client-icon {
+  fill: var(--accent-color);
+}
+
+.client-icon {
+  fill: var(--icon-color);
+}
+
+/* Футер */
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--footer-background-color);
+}
+.footer-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  color: var(--primary-white-color);
+}
+
+.address {
+  margin-top: 0;
+  margin-bottom: 9px;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-white-color);
+}
+
+.address-section {
+  margin-right: 30px;
+}
+
+.contacts-info {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts-info:hover,
+.contacts-info:focus {
+  color: var(--accent-color);
+}
+
+.contacts > .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.join {
+  width: 270px;
+}
+
+.join .social-icons-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.join-text {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+}
+
+.join .social-icons-link:hover,
+.join .social-icons-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+/* main страницы Портфолио */
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.button-secondary {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--title-text-color);
+  cursor: pointer;
+
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.button-secondary:hover,
+.button-secondary:focus,
+.button-secondary.current {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filters .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Карточки проектов */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects .item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.projects .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.projects .title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.item .img-block {
+  display: block;
+}
+
+.projects .link:hover,
+.projects .link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.projects .category {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
