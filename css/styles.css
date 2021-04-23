@@ -312,6 +312,7 @@ img {
 .activity .item:not(:last-child) {
   margin-right: 30px;
 }
+
 /* Секция Наша команда */
 .team.section {
   background-color: var(--team-bg);
