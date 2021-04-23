@@ -365,9 +365,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
   width: 44px;
   height: 44px;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-icons-link:hover,
