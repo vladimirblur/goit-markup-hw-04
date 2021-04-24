@@ -373,6 +373,8 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
+
+  fill: var(--icon-color);
 }
 
 .social-icons-item:not(:last-child) {
@@ -393,7 +395,6 @@ img {
 .social-icons-svg {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
 }
 
 /* Clients section */
@@ -423,18 +424,14 @@ img {
   color: var(--icon-color);
 }
 
+.clients-link {
+  fill: var(--icon-color);
+}
+
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);
-}
-
-.clients-link:hover .client-icon,
-.clients-link:focus .client-icon {
   fill: var(--accent-color);
-}
-
-.client-icon {
-  fill: var(--icon-color);
 }
 
 /* Футер */
@@ -499,6 +496,7 @@ img {
 .join .social-icons-link {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  fill: var(--primary-white-color);
 }
 
 .join-text {
@@ -521,7 +519,6 @@ img {
 .social-icons-svg {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
 }
 
 /* main страницы Портфолио */
